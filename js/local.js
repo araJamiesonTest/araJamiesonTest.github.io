@@ -104,7 +104,7 @@ var G_StoryAudio = null;
 var G_WantAnimation = true;
 
 const G_AudioContextClass = window.AudioContext || window.webkitAudioContext; // See head-of-file comments.
-const G_AudioContext = new G_AudioContextClass();
+const G_AudioContext = null;
 
 
 
@@ -153,6 +153,8 @@ function initialise ()
 
 function doStart (wantAnimation)
 {
+    const G_AudioContext = new G_AudioContextClass();
+
     G_WantAnimation = wantAnimation;
     
     $("#splash-text").text("");
